@@ -7,7 +7,20 @@ app.secret_key = "SECRETSECRETSECRET"
 
 
 def is_mel(name, email):
-    """Is this user Mel?"""
+    """Is this user Mel?
+
+    >>> is_mel("Mel Melitpolski", _)
+    True
+
+    >>> is_mel(_, "mel@ubermelon.com")
+    True
+
+    >>> is_mel("Ogbot", "ogbot@gmail.com")
+    False
+
+    >>> is_mel("Judith Butler", "judith@awesome.com")
+    False
+    """
 
     return name == "Mel Melitpolski" or email == "mel@ubermelon.com"
 
